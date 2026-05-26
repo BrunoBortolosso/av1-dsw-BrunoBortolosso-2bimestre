@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "batata": "node src/index.js",
+    "prisma:test": "node src/config/testPrismaConnection.js",
     "dev": "nodemon src/server.js",
     "start": "node src/server.js"
   },
@@ -22,14 +23,13 @@
   "homepage": "https://github.com/h-fcosta/js-basico#readme",
   "description": "",
   "dependencies": {
-    "@prisma/adapter-mariadb": "^7.8.0",
-    "@prisma/client": "^7.7.0",
+    "@prisma/client": "5.22.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "mariadb": "^3.5.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.14",
-    "prisma": "^7.8.0"
+    "prisma": "5.22.0"
   }
 }

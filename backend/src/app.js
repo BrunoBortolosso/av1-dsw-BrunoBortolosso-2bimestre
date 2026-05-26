@@ -8,7 +8,7 @@
 // - Preparar a aplicação para ser exportada
 
 import express from "express";
-import tarefaRoutes from "./routes/tarefaRoutes.js";
+import taskRoutes from "./routes/taskRoutes.js";
 
 // Cria a aplicação Express
 const app = express();
@@ -30,14 +30,14 @@ app.use(express.urlencoded({ extended: true }));
 // Rota inicial apenas para testar se a API está funcionando
 app.get("/", (req, res) => {
   res.json({
-    mensagem: "API de tarefas funcionando!",
+    mensagem: "API de tasks funcionando!",
     versao: "2.0",
     arquitetura: "MVC"
   });
 });
 
 // Registra as rotas de tarefas
-app.use(tarefaRoutes);
+app.use(taskRoutes);
 
 // ========================================
 // TRATAMENTO DE ROTAS NÃO ENCONTRADAS
